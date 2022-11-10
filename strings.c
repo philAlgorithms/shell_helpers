@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _strlen - gets the length of a string
+ * @s: pointer to the string
+ * 
+ * Return: length of the string
+*/
 int _strlen(char *s)
 {
     size_t len = 0;
@@ -10,6 +16,15 @@ int _strlen(char *s)
     return (len);
 }
 
+/**
+ * tok_size - Locates the delimiter index marking the end
+ *             of the first token contained within a string.
+ * @str: The string to be searched.
+ * @delim: The delimiter character.
+ *
+ * Return: The delimiter index marking the end of
+ *         the intitial token pointed to be str.
+ */
 int tok_size(char *str, char *delim)
 {
     int size = 0, i = 0;
@@ -22,6 +37,14 @@ int tok_size(char *str, char *delim)
     return (size);
 }
 
+/**
+ * tok_count - Counts the number of delimited
+ *                words contained within a string.
+ * @str: The string to be searched.
+ * @delim: The delimiter character.
+ *
+ * Return: The number of words contained within str.
+ */
 int tok_count(char *str, char *delim)
 {
     int i, num = 0, len = 0;
@@ -40,6 +63,13 @@ int tok_count(char *str, char *delim)
     return (num);
 }
 
+/**
+ * _strtok - Tokenizes a string.
+ * @line: The string.
+ * @delim: The delimiter character to tokenize the string by.
+ *
+ * Return: A pointer to an array containing the tokenized words.
+ */
 char **_strtok(char *line, char *delim)
 {
     char **tokens;
@@ -83,6 +113,11 @@ char **_strtok(char *line, char *delim)
     return (tokens);
 }
 
+/**
+ * main - tests program
+ * 
+ * Return: always 1
+*/
 int main(void)
 {
     char **tokens;
